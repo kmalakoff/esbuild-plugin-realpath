@@ -14,7 +14,8 @@
     "pnpm",
     "lerna",
     "monorepo",
-    "react-native"
+    "react-native",
+    "react-native-web"
   ],
   "scripts": {
     "format": "prettier --write .",
