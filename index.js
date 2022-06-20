@@ -13,7 +13,7 @@ module.exports = (options = {}) => {
         ...options,
       };
       const resolve = build.initialOptions.platform === 'node' ? nodeResolve : browserResolve;
-      build.onResolve({ filter: /^[^.]/ }, async (args) => {
+      build.onResolve({ filter: /^[^.\/]|^\.[^.\/]|^\.\.[^\/]/ }, async (args) => {
         if (!cache[args.path]) {
           cache[args.path] = resolveOnce(async () => {
             try {
