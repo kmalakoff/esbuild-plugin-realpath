@@ -13,6 +13,7 @@ module.exports = (options = {}) => {
         ...options,
       };
       const resolve = build.initialOptions.platform === 'node' ? nodeResolve : browserResolve;
+      // eslint-disable-next-line no-useless-escape
       build.onResolve({ filter: /^[^.\/]|^\.[^.\/]|^\.\.[^\/]/ }, async (args) => {
         if (!cache[args.path]) {
           cache[args.path] = resolveOnce(async () => {
