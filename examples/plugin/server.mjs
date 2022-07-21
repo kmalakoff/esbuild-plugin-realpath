@@ -1,5 +1,5 @@
 import esbuild from 'esbuild';
-import realpath from '../../index.js';
+import realpath from '../../lib/index.js';
 
 esbuild.build({
   entryPoints: ['client.tsx'],
