@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 const esbuild = require('esbuild');
-const realpath = require('../../index.js');
+const realpath = require('../../lib/index.js');
 
 const path = require('path');
 const fs = require('fs-extra');
