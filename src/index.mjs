@@ -1,19 +1,22 @@
-const fs = require('fs').promises;
-const nodeResolve = require('util').promisify(require('resolve'));
-const browserResolve = require('util').promisify(require('browser-resolve'));
-const resolveOnce = require('resolve-once');
+import { promises as fs } from 'fs';
+import { promisify } from 'util';
+import browserResolve_ from 'browser-resolve';
+import resolve_ from 'resolve';
+import resolveOnce from 'resolve-once';
 
-module.exports = (options = {}) => {
+const nodeResolve = promisify(resolve_);
+const browserResolve = promisify(browserResolve_);
+
+export default (optionsIn = {}) => {
   return {
     name: 'realpath',
     setup(build) {
       const cache = {};
-      options = {
+      const options = {
         extensions: build.initialOptions.resolveExtensions,
-        ...options,
+        ...optionsIn,
       };
       const resolve = build.initialOptions.platform === 'node' ? nodeResolve : browserResolve;
-      // eslint-disable-next-line no-useless-escape
       build.onResolve({ filter: /^[^.\/]|^\.[^.\/]|^\.\.[^\/]/ }, async (args) => {
         if (!cache[args.path]) {
           cache[args.path] = resolveOnce(async () => {
