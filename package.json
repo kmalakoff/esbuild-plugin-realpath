@@ -1,6 +1,6 @@
 {
   "name": "esbuild-plugin-realpath",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A plugin to resolve the fs.realpath for modules in monorepos targeting the browser and node",
   "keywords": [
     "esbuild",
