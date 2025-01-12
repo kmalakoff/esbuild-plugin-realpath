@@ -1,7 +1,8 @@
 {
-  "name": "plugin",
+  "name": "esbuild-plugin-realpath-plugin",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "license": "MIT",
   "author": "Kevin Malakoff",
   "scripts": {
