@@ -1,1 +1,1 @@
-ignores: ["esbuild-plugin-realpath",  "@types/*", "@biomejs/*", "@types/react", "@types/react-dom", "react", "react-dom"]
+ignores: ["@types/*", "esbuild-plugin-realpath",  "@types/*", "@biomejs/*", "@types/react", "@types/react-dom", "react", "react-dom"]
