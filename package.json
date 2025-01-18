@@ -38,6 +38,7 @@
     "@types/node": "*",
     "esbuild": "*",
     "fs-extra": "*",
+    "install-optional": "^0.1.28",
     "react": "*",
     "react-dom": "*"
   },
