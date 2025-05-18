@@ -17,7 +17,7 @@
   "license": "MIT",
   "author": "",
   "main": "dist/cjs/index.cjs",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/cjs/index.d.cts",
   "files": [
     "dist"
   ],
