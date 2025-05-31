@@ -1,16 +1,17 @@
 import { promises as fs } from 'fs';
 import { promisify } from 'util';
 import browserResolve_ from 'browser-resolve';
+import type { Plugin, PluginBuild } from 'esbuild';
 import resolve_ from 'resolve';
 import resolveOnce from 'resolve-once';
 
 const nodeResolve = promisify(resolve_);
 const browserResolve = promisify(browserResolve_);
 
-export default (optionsIn = {}) => {
+export default (optionsIn = {}): Plugin => {
   return {
     name: 'realpath',
-    setup(build) {
+    setup(build: PluginBuild): undefined {
       const cache = {};
       const options = {
         extensions: build.initialOptions.resolveExtensions,
