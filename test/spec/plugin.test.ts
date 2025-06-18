@@ -1,16 +1,17 @@
 import assert from 'assert';
 
 import { installSync, removeSync } from 'install-optional';
+
 removeSync('esbuild', '@esbuild/');
 installSync('esbuild', `${process.platform}-${process.arch}`);
+
 import esbuild from 'esbuild';
 
 // @ts-ignore
 import realpath from 'esbuild-plugin-realpath';
-
+import fs from 'fs-extra';
 import path from 'path';
 import url from 'url';
-import fs from 'fs-extra';
 
 const __dirname = path.dirname(typeof __filename !== 'undefined' ? __filename : url.fileURLToPath(import.meta.url));
 
