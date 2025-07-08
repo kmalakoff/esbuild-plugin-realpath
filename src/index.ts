@@ -5,7 +5,7 @@ import * as resolve from 'resolve';
 import resolveOnce from 'resolve-once';
 import { promisify } from 'util';
 
-const nodeResolve = promisify(resolve);
+const nodeResolve = promisify(resolve.default ?? resolve);
 const browserResolve = promisify(browserResolve_);
 
 export default (optionsIn = {}): Plugin => {
