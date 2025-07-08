@@ -1,11 +1,11 @@
 import browserResolve_ from 'browser-resolve';
 import type { Plugin, PluginBuild } from 'esbuild';
 import { promises as fs } from 'fs';
-import resolve_ from 'resolve';
+import * as resolve from 'resolve';
 import resolveOnce from 'resolve-once';
 import { promisify } from 'util';
 
-const nodeResolve = promisify(resolve_);
+const nodeResolve = promisify(resolve);
 const browserResolve = promisify(browserResolve_);
 
 export default (optionsIn = {}): Plugin => {
