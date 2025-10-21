@@ -7,7 +7,6 @@ installSync('esbuild', `${process.platform}-${process.arch}`);
 
 import esbuild from 'esbuild';
 
-// @ts-ignore
 import realpath from 'esbuild-plugin-realpath';
 import fs from 'fs-extra';
 import path from 'path';
