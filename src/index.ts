@@ -11,7 +11,7 @@ const browserResolve = promisify(browserResolve_);
 export default (optionsIn = {}): Plugin => {
   return {
     name: 'realpath',
-    setup(build: PluginBuild): undefined {
+    setup(build: PluginBuild): void {
       const cache = {};
       const options = {
         extensions: build.initialOptions.resolveExtensions,
