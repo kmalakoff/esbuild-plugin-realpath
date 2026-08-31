@@ -60,5 +60,12 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "node-filename-to-dist-paths": true,
+    "node-semvers": true,
+    "node-version-use": true,
+    "thread-sleep-compat": true
   }
 }
