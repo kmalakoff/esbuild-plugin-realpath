@@ -1,1 +1,1 @@
-ignores: ["node-version-use", "ts-dev-stack", "esbuild-plugin-realpath",  "@types/react", "@types/react-dom", "react", "react-dom"]
+ignores: ["esbuild-plugin-realpath", "node-version-use", "ts-dev-stack", "@types/react", "@types/react-dom", "react", "react-dom"]
