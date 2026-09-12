@@ -1,6 +1,14 @@
-## esbuild-plugin-realpath
+# esbuild-plugin-realpath
 
-A plugin to resolve the fs.realpath for modules in monorepos targeting the browser and node.
+A plugin that resolves the real filesystem path for modules in monorepos targeting the browser or Node.js.
+
+## Installation
+
+```sh
+npm install esbuild esbuild-plugin-realpath
+```
+
+Run this in an esbuild project that has `src/index.js`:
 
 ```javascript
 const esbuild = require('esbuild');
@@ -14,6 +22,12 @@ esbuild.build({
 });
 ```
 
+The plugin uses browser resolution for browser builds and Node resolution for Node builds. It resolves each module path once and writes the bundled output to `public/bundle.js` in this example.
+
 ## Examples
 
 [code](https://github.com/kmalakoff/esbuild-plugin-realpath/tree/master/examples)
+
+## License
+
+MIT
